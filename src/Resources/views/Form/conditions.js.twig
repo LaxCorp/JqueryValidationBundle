@@ -16,7 +16,7 @@
 {% endmacro %}
 
 {% macro field_value_dependency(condition, rule) %}
-    var dep = form.find("[name=\"{{ condition.field|e('js') }}\"]");
+    var dep = form.find("[name=\"{{ condition.field|e('js') }}\"]");ыгвщ ыц
     if(dep.length > 1 || dep.is(':checkbox')) {
         dep = dep.filter(':checked')
     } else if(dep.is('select')) {

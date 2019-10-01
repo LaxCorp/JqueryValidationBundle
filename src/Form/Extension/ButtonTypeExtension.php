@@ -34,9 +34,9 @@ class ButtonTypeExtension extends AbstractTypeExtension
     /**
      * {@inheritdoc}
      */
-    public function getExtendedType()
+    public static function getExtendedTypes(): iterable
     {
-        return FormHelper::isSymfony3Compatible() ? ButtonType::class : 'button';
+        return [FormHelper::isSymfony3Compatible() ? ButtonType::class : 'button'];
     }
 
     protected function hasRuleBuilderContext(FormView $view)

@@ -14,9 +14,9 @@ class Configuration implements ConfigurationInterface
      */
     public function getConfigTreeBuilder()
     {
-        $treeBuilder = new TreeBuilder();
+        $treeBuilder = new TreeBuilder('boekkooi_jquery_validation');
 
-        $rootNode = $treeBuilder->root('boekkooi_jquery_validation');
+        $rootNode = $treeBuilder->getRootNode();
         $rootNode->append($this->loadFormNode());
         $rootNode->append($this->loadTwigNode());
 
